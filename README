@@ -1,0 +1,8 @@
+Creando Entorno Virtual:
+Linux: python3 -m venv tp1
+Activando Entorno:
+Linux: source tp1/bin/activate
+
+Dependencias a instalar: 
+pip install Flask, Flask-mysqldb pytest dotenv requests Flask-SQLAlchemy
+pip install pymysql
