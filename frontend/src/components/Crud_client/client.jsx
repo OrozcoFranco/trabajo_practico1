@@ -24,7 +24,8 @@ function Client() {
 
     return (
         <div style={{ padding: '1rem', color: 'white' }}>
-            <nav style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+            <h1 style={{ color: 'lightblue', textAlign: 'center', marginBottom: '2rem' }}>CLIENTES</h1>
+            <nav style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
                 <button onClick={() => setActiveSection('create')}>Crear Cliente</button>
                 <button onClick={() => setActiveSection('list')}>Lista de Clientes</button>
                 <button onClick={() => setActiveSection('delete')}>Eliminar Cliente</button>

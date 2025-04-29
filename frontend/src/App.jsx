@@ -1,31 +1,35 @@
 import { useState } from 'react'
-import logo from './images/logo.png'
-import Footer from './components/footer.jsx'
+import { Routes, Route } from 'react-router-dom'
 import Client from './components/Crud_client/client.jsx'
+import Vehicle from './components/ vehicles/vehicle.jsx'
+import Layout from './components/layout.jsx'
+import Repair from './components/repairs/repairs.jsx'
 import './App.css'
-function App() {
-  const [count, setCount] = useState(0)
 
+function Home() {
+  return (
+    <div>
+      <a href="https://react.dev" target="_blank">
+        <img src="/images/logo.png" className="logo react" alt="React logo" />
+      </a>
+      <h1>TALLER AUTOFIX</h1>
+    </div>
+  );
+}
+
+function App() {
   return (
     <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={logo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>TALLER AUTOFIX</h1>
-      {/*
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-       */}
-      <div className="card">
-        <Client />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="clientes" element={<Client />} />
+          <Route path="vehiculos" element={<Vehicle />} />
+          <Route path="reparaciones" element={<Repair/>} />
+        </Route>
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App
-

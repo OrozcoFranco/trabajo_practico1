@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre botones */
+    margin: 20px 0; /* Separación arriba y abajo */
+}
+
+.nav-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff; /* Azul suave */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Azul un poco más oscuro al pasar el mouse */
+}
